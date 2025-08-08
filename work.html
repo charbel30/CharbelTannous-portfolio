@@ -49,12 +49,14 @@
         transform: scale(1);
       }
 
-      /* Ensure work card images don’t overflow on mobile */
-      .work-card-image { position: relative; overflow: hidden; }
-      .work-card-image .image-full { width: 100%; height: auto; display: block; }
+      /* Scoped mobile tweak for Anghami card only */
       @media screen and (max-width: 767px) {
-        .work-card-image { max-height: 220px; }
-        .work-card-image .image-full { width: 100%; height: 100%; object-fit: cover; }
+        .anghami-thumb {
+          width: 100%;
+          height: 200px; /* scale down height on mobile */
+          object-fit: contain; /* avoid cropping so it fits the selectable area */
+          display: block;
+        }
       }
 
       .transition-preloader {
@@ -370,7 +372,7 @@
                             <div class="work-card-image">
                               <img
                                 alt="Anghami banner"
-                                class="image-full"
+                                class="image-full anghami-thumb"
                                 loading="lazy"
                                 src="images/anghami_banner.png"
                               />
