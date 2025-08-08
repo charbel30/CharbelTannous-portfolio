@@ -39,6 +39,14 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
+      /* Prevent banner overflow and ensure good crop on small screens */
+      .section-banner-post .background-wrapper { width: 100%; }
+      .section-banner-post .background-wrapper .background-image { position: relative; width: 100%; overflow: hidden; }
+      .section-banner-post .background-wrapper .background-image .image-full { width: 100%; height: auto; display: block; }
+      @media screen and (max-width: 767px) {
+        .section-banner-post .background-wrapper .background-image { max-height: 45vh; }
+        .section-banner-post .background-wrapper .background-image .image-full { width: 100%; height: 100%; object-fit: cover; }
+      }
     </style>
     <style>
       html {
