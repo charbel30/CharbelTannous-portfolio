@@ -10,5 +10,5 @@ Allow: /experience/
 Allow: /*.html$
 
 # Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://charbeltannous.com/sitemap.xml
 
